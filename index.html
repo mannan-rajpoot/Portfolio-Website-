@@ -174,26 +174,6 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);ove
 .about-char-img{width:100%;height:auto;max-height:560px;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:screen;filter:drop-shadow(-6px 0 28px rgba(0,0,0,.5))}
 .about-img-glow{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:90%;height:200px;background:radial-gradient(ellipse at 50% 100%,rgba(255,255,255,.05) 0%,transparent 70%);pointer-events:none}
 
-/* PROJECTS */
-.projects-section{position:relative;background:#111;padding:6rem 2.5rem 5rem}
-.projects-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent)}
-.projects-container{max-width:1280px;margin:0 auto}
-.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:3rem}
-.projects-heading{font-size:clamp(2rem,3.2vw,3.1rem);font-weight:900;line-height:1.08;text-transform:uppercase;letter-spacing:-1px;margin-top:.5rem}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.6rem}
-.project-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .28s,box-shadow .35s;display:flex;flex-direction:column}
-.project-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.2);box-shadow:0 24px 48px rgba(0,0,0,.35)}
-.project-img-wrap{overflow:hidden;height:220px}
-.project-img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.22,1,.36,1);display:block}
-.project-card:hover .project-img{transform:scale(1.05)}
-.project-content{padding:1.4rem;flex:1;display:flex;flex-direction:column}
-.project-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.8rem}
-.project-tag{font-size:.62rem;padding:.2rem .65rem;background:rgba(255,255,255,.08);border-radius:9999px;color:rgba(255,255,255,.65);font-weight:500}
-.project-title{font-size:1.2rem;font-weight:700;margin-bottom:.5rem;line-height:1.22}
-.project-desc{font-size:.82rem;line-height:1.72;color:var(--muted);margin-bottom:1.2rem;flex:1}
-.project-links{display:flex;gap:1rem;margin-top:auto}
-.project-links a{font-size:.78rem;font-weight:600;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s,gap .2s}
-.project-links a:hover{color:rgba(255,255,255,.6);gap:.7rem}
 
 /* CONTACT — beautiful redesign */
 .contact-section{position:relative;background:linear-gradient(180deg,#111 0%,#0d0d0d 100%);padding:7rem 2.5rem;overflow:hidden}
