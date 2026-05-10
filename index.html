@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mannan Rajpoot  software engineer</title>
+<title>Mannan Rajpoot - Web Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -41,7 +41,12 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);ove
 .nav-socials a:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
 .nav-socials svg{width:13px;height:13px}
 
-
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .2s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* OVERLAY */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;backdrop-filter:blur(4px)}
@@ -105,13 +110,7 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);ove
 .anim-char{animation:slideIn .8s cubic-bezier(.22,1,.36,1) forwards}
 .anim-show{animation:fadeUp .5s ease forwards}
 
-/* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1);will-change:opacity,transform}
-.reveal.from-left{transform:translateX(-36px)}
-.reveal.from-right{transform:translateX(36px)}
-.reveal.in-view{opacity:1;transform:none}
-.reveal.d1{transition-delay:.05s}.reveal.d2{transition-delay:.12s}.reveal.d3{transition-delay:.19s}
-.reveal.d4{transition-delay:.27s}.reveal.d5{transition-delay:.35s}
+
 
 /* SECTION SHARED */
 .section-label{display:flex;align-items:center;gap:.7rem;font-size:.6rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3)}
