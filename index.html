@@ -139,43 +139,99 @@ section{padding:clamp(52px,7vw,88px) var(--pad);position:relative;overflow-x:hid
 @media(max-width:860px){.about-top{grid-template-columns:1fr;gap:18px}.about-nums{grid-template-columns:repeat(2,1fr)}.about-body{grid-template-columns:1fr;gap:12px}.about-bottom{grid-template-columns:1fr;gap:28px}}
 @media(max-width:480px){.about-nums{grid-template-columns:repeat(2,1fr)}.skill-name{min-width:90px}}
 
-/* PROJECTS */
+/* PROJECTS — Enhanced Professional */
 #projects{background:var(--bg2)}
 .proj-header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
 .proj-h{font-size:clamp(30px,4.5vw,58px);font-weight:700;line-height:.95;letter-spacing:-2px}
 .proj-h .outline{-webkit-text-stroke:1px rgba(240,236,228,.2);color:transparent}
 .proj-count{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--text3);padding-bottom:6px;white-space:nowrap}
-.proj-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.proj-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
 .filter-pill{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;color:var(--text2);border:1px solid var(--border2);padding:6px 16px;border-radius:40px;background:transparent;cursor:pointer;transition:all .2s;font-family:var(--font)}
 .filter-pill:hover,.filter-pill.active{color:#080808;background:var(--accent);border-color:var(--accent)}
-.proj-featured{display:grid;grid-template-columns:280px 1fr;border:1px solid var(--border);border-radius:20px;overflow:hidden;margin-bottom:16px;background:var(--surface);transition:border-color .3s}
-.proj-featured:hover{border-color:rgba(200,240,96,.2)}
-.proj-feat-thumb{background:#111;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:200px}
-.proj-feat-thumb svg{width:56px;height:56px;color:var(--accent);opacity:.7;position:relative;z-index:2}
-.proj-feat-thumb::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 45% 55%,rgba(200,240,96,.07) 0%,transparent 65%)}
-.proj-feat-body{padding:clamp(18px,3vw,32px);display:flex;flex-direction:column;justify-content:space-between}
-.proj-tag-line{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block}
-.proj-feat-body h3{font-size:clamp(18px,2.5vw,28px);font-weight:700;letter-spacing:-.5px;line-height:1.1;margin-bottom:8px}
-.proj-feat-body p{color:var(--text2);font-size:13px;line-height:1.75;margin-bottom:14px;flex:1}
-.tech-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.tech{font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--text3);border:1px solid var(--border);padding:4px 10px;border-radius:14px}
-.proj-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(200,240,96,.25);padding-bottom:4px;transition:gap .2s,border-color .2s;width:fit-content}
-.proj-link:hover{gap:14px;border-color:var(--accent)}
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:clamp(16px,2.5vw,24px);transition:border-color .3s,transform .25s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.9,.4,1)}
-.proj-card:hover{border-color:rgba(200,240,96,.15);transform:translateY(-4px)}
-.proj-card:hover::before{transform:scaleX(1)}
-.proj-card-icon{width:32px;height:32px;margin-bottom:12px;color:var(--accent);opacity:.8}
-.proj-num{font-size:10px;letter-spacing:1.5px;color:var(--text3);text-transform:uppercase;margin-bottom:6px}
-.proj-card h3{font-size:clamp(14px,1.8vw,17px);font-weight:600;letter-spacing:-.3px;margin-bottom:6px}
-.proj-card p{color:var(--text2);font-size:12px;line-height:1.7;flex:1}
-.proj-card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid var(--border)}
-.proj-card-arrow{width:28px;height:28px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--text3);font-size:13px;transition:all .2s;cursor:pointer;background:none;font-family:var(--font)}
-.proj-card:hover .proj-card-arrow{background:var(--accent);border-color:var(--accent);color:#080808}
-@media(max-width:960px){.proj-featured{grid-template-columns:1fr}.proj-feat-thumb{min-height:140px}}
+
+/* ── FEATURED PROJECT ── */
+.proj-featured{display:grid;grid-template-columns:420px 1fr;border:1px solid var(--border);border-radius:24px;overflow:hidden;margin-bottom:20px;background:var(--surface);transition:border-color .35s,box-shadow .35s;box-shadow:0 0 0 rgba(200,240,96,0)}
+.proj-featured:hover{border-color:rgba(200,240,96,.25);box-shadow:0 8px 48px rgba(200,240,96,.06)}
+.proj-feat-thumb{background:#0c0c0c;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:280px}
+.proj-feat-thumb .proj-thumb-img{width:100%;height:100%;object-fit:cover;opacity:.72;transition:opacity .4s,transform .5s;position:absolute;inset:0}
+.proj-featured:hover .proj-feat-thumb .proj-thumb-img{opacity:.88;transform:scale(1.04)}
+.proj-feat-thumb-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;position:absolute;inset:0;z-index:2}
+.proj-feat-thumb-placeholder svg{width:64px;height:64px;color:var(--accent);opacity:.55}
+.proj-feat-thumb-placeholder .proj-thumb-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text3)}
+.proj-feat-thumb::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 45% 55%,rgba(200,240,96,.10) 0%,transparent 65%);z-index:1;pointer-events:none}
+.proj-feat-thumb-overlay{position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(10,10,10,.85),transparent);z-index:3;pointer-events:none}
+.proj-feat-thumb-num{position:absolute;top:18px;left:20px;font-size:11px;letter-spacing:3px;color:rgba(200,240,96,.6);text-transform:uppercase;z-index:4;font-weight:600}
+.proj-feat-thumb-year{position:absolute;bottom:18px;left:20px;font-size:10px;letter-spacing:2px;color:rgba(240,236,228,.4);text-transform:uppercase;z-index:4}
+.proj-feat-thumb-live{position:absolute;top:18px;right:18px;display:flex;align-items:center;gap:6px;background:rgba(200,240,96,.12);border:1px solid rgba(200,240,96,.2);padding:5px 12px;border-radius:30px;font-size:10px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;z-index:4;font-weight:600}
+.proj-feat-thumb-live::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulseDot 2s ease-in-out infinite;flex-shrink:0}
+.proj-feat-body{padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.proj-feat-top{display:flex;flex-direction:column;gap:12px;flex:1}
+.proj-tag-line{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px}
+.proj-tag-line::before{content:'';width:20px;height:1px;background:var(--accent);flex-shrink:0}
+.proj-feat-body h3{font-size:clamp(22px,2.8vw,36px);font-weight:700;letter-spacing:-1px;line-height:1.05;margin:0}
+.proj-feat-body p{color:var(--text2);font-size:14px;line-height:1.8;margin:0;flex:1}
+.proj-feat-meta{display:flex;flex-direction:column;gap:16px}
+.proj-meta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.proj-meta-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);font-weight:600;min-width:80px;flex-shrink:0}
+.tech-row{display:flex;flex-wrap:wrap;gap:6px}
+.tech{font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--text2);border:1px solid var(--border2);padding:4px 12px;border-radius:14px;transition:all .2s;background:rgba(255,255,255,.02)}
+.tech:hover{color:var(--accent);border-color:rgba(200,240,96,.3);background:rgba(200,240,96,.04)}
+.proj-feat-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.proj-link{display:inline-flex;align-items:center;gap:8px;color:#080808;background:var(--accent);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;text-decoration:none;padding:10px 22px;border-radius:30px;transition:all .25s;white-space:nowrap}
+.proj-link:hover{background:var(--accent2);gap:13px;transform:translateY(-2px)}
+.proj-link-ghost{display:inline-flex;align-items:center;gap:8px;color:var(--text2);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:1px solid var(--border2);padding:10px 20px;border-radius:30px;transition:all .25s;white-space:nowrap}
+.proj-link-ghost:hover{color:var(--accent);border-color:rgba(200,240,96,.3);gap:12px}
+
+/* ── FEATURES BADGE ROW ── */
+.proj-feat-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.proj-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;letter-spacing:1px;color:var(--text3);background:rgba(255,255,255,.03);border:1px solid var(--border);padding:4px 10px;border-radius:8px;text-transform:uppercase}
+.proj-badge svg{width:10px;height:10px;fill:currentColor;color:var(--accent);flex-shrink:0}
+
+/* ── PROJECT GRID CARDS ── */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:4px}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;display:flex;flex-direction:column;position:relative;cursor:pointer}
+.proj-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.9,.4,1);border-radius:0}
+.proj-card:hover{border-color:rgba(200,240,96,.18);transform:translateY(-5px);box-shadow:0 20px 48px rgba(0,0,0,.35),0 0 0 1px rgba(200,240,96,.06)}
+.proj-card:hover::after{transform:scaleX(1)}
+
+/* card thumbnail */
+.proj-card-thumb{height:160px;background:#0c0c0c;position:relative;overflow:hidden;flex-shrink:0}
+.proj-card-thumb img{width:100%;height:100%;object-fit:cover;opacity:.65;transition:opacity .4s,transform .5s}
+.proj-card:hover .proj-card-thumb img{opacity:.85;transform:scale(1.06)}
+.proj-card-thumb-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
+.proj-card-thumb-placeholder svg{width:36px;height:36px;color:var(--accent);opacity:.45}
+.proj-card-thumb::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 60%,rgba(200,240,96,.07) 0%,transparent 70%);z-index:1;pointer-events:none}
+.proj-card-thumb-tag{position:absolute;top:12px;left:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);background:rgba(200,240,96,.1);border:1px solid rgba(200,240,96,.2);padding:3px 9px;border-radius:20px;z-index:5;font-weight:600}
+.proj-card-thumb-num{position:absolute;bottom:10px;right:12px;font-size:10px;letter-spacing:2px;color:rgba(240,236,228,.3);text-transform:uppercase;z-index:5}
+
+/* card body */
+.proj-card-body{padding:clamp(16px,2.2vw,22px);display:flex;flex-direction:column;gap:8px;flex:1}
+.proj-num{font-size:9px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;font-weight:600}
+.proj-card h3{font-size:clamp(15px,1.9vw,18px);font-weight:700;letter-spacing:-.4px;line-height:1.15;margin:0;transition:color .2s}
+.proj-card:hover h3{color:var(--accent)}
+.proj-card-desc{color:var(--text2);font-size:12px;line-height:1.75;flex:1;margin:0}
+.proj-card-tech{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.proj-card-tech .tech{font-size:9px;padding:3px 9px}
+
+/* card footer */
+.proj-card-footer{display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,2.2vw,22px);border-top:1px solid var(--border);background:rgba(255,255,255,.015);flex-shrink:0}
+.proj-card-links{display:flex;gap:8px}
+.proj-card-link-btn{display:inline-flex;align-items:center;gap:5px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;text-decoration:none;padding:6px 12px;border-radius:20px;transition:all .2s;white-space:nowrap;border:1px solid var(--border2);color:var(--text2);background:transparent;font-family:var(--font);cursor:pointer}
+.proj-card-link-btn:hover,.proj-card-link-btn.primary{background:var(--accent);border-color:var(--accent);color:#080808}
+.proj-card-link-btn.primary:hover{background:var(--accent2)}
+.proj-card-arrow{width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--text3);font-size:14px;transition:all .25s;cursor:pointer;background:none;font-family:var(--font);flex-shrink:0}
+.proj-card:hover .proj-card-arrow{background:var(--accent);border-color:var(--accent);color:#080808;transform:translateX(3px)}
+
+/* ── VIEW ALL CTA ── */
+.proj-view-all{display:flex;justify-content:center;margin-top:32px}
+.proj-view-all-btn{display:inline-flex;align-items:center;gap:10px;color:var(--text2);border:1px solid var(--border2);padding:13px 32px;border-radius:40px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .3s;font-family:var(--font);cursor:pointer;background:transparent}
+.proj-view-all-btn:hover{color:var(--accent);border-color:rgba(200,240,96,.4);background:rgba(200,240,96,.04);gap:16px}
+
+@media(max-width:1100px){.proj-featured{grid-template-columns:340px 1fr}}
+@media(max-width:960px){.proj-featured{grid-template-columns:1fr}.proj-feat-thumb{min-height:200px}}
 @media(max-width:720px){.proj-grid{grid-template-columns:1fr 1fr}.proj-header{margin-bottom:20px}}
-@media(max-width:480px){.proj-grid{grid-template-columns:1fr}.proj-feat-body{padding:18px}}
+@media(max-width:540px){.proj-feat-actions{flex-direction:column;align-items:flex-start}.proj-link,.proj-link-ghost{width:100%;justify-content:center}}
+@media(max-width:480px){.proj-grid{grid-template-columns:1fr}.proj-feat-body{padding:20px}.proj-card-thumb{height:130px}}
 
 /* CONTACT */
 #contacts{background:var(--bg2)}
@@ -409,51 +465,188 @@ var EMAILJS_CONFIG = {
     <button class="filter-pill">Branding</button>
     <button class="filter-pill">Motion</button>
   </div>
+
+  <!-- ── FEATURED PROJECT ── -->
   <div class="proj-featured reveal">
     <div class="proj-feat-thumb">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <!-- Replace src with your actual screenshot: src="projects/nova-studio.jpg" -->
+      <div class="proj-feat-thumb-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="proj-thumb-label">Nova Studio</span>
+      </div>
+      <div class="proj-feat-thumb-num">01 / Featured</div>
+      <div class="proj-feat-thumb-year">2024</div>
+      <div class="proj-feat-thumb-live">Live</div>
+      <div class="proj-feat-thumb-overlay"></div>
     </div>
     <div class="proj-feat-body">
-      <div>
-        <span class="proj-tag-line">✦ Featured — 2024</span>
+      <div class="proj-feat-top">
+        <span class="proj-tag-line">Frontend Development &amp; UI/UX</span>
         <h3>Nova Studio</h3>
-        <p>A modern digital agency website with scroll-driven animations, immersive transitions, and a pixel-perfect responsive layout. Delivered 98/100 Lighthouse score with full cross-browser support.</p>
-        <div class="tech-row"><span class="tech">React</span><span class="tech">GSAP</span><span class="tech">Figma</span><span class="tech">Three.js</span></div>
+        <p>A modern digital agency website with scroll-driven animations, immersive 3D transitions, and pixel-perfect responsive layout. Achieved a 98/100 Lighthouse score with full cross-browser support and sub-2s load time across all devices.</p>
+        <div class="proj-feat-badges">
+          <span class="proj-badge"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>98/100 Lighthouse</span>
+          <span class="proj-badge"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>Scroll Animations</span>
+          <span class="proj-badge"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>Fully Responsive</span>
+          <span class="proj-badge"><svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>Clean Code</span>
+        </div>
       </div>
-      <a href="#" class="proj-link">View Case Study →</a>
+      <div class="proj-feat-meta">
+        <div class="proj-meta-row">
+          <span class="proj-meta-label">Tech Stack</span>
+          <div class="tech-row"><span class="tech">React</span><span class="tech">GSAP</span><span class="tech">Three.js</span><span class="tech">Figma</span><span class="tech">Vite</span><span class="tech">Tailwind</span></div>
+        </div>
+        <div class="proj-feat-actions">
+          <a href="#" class="proj-link">View Case Study →</a>
+          <a href="#" class="proj-link-ghost">GitHub ↗</a>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- ── PROJECT CARDS GRID ── -->
   <div class="proj-grid">
+
+    <!-- Card 02 -->
     <div class="proj-card reveal">
-      <svg class="proj-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      <span class="proj-num">02 — Branding</span>
-      <h3>EcoChain</h3>
-      <p>Sustainable brand identity with interactive storytelling, motion guidelines, and a full design language.</p>
+      <div class="proj-card-thumb">
+        <!-- Replace src with: src="projects/ecochain.jpg" -->
+        <div class="proj-card-thumb-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <span class="proj-card-thumb-tag">Branding</span>
+        <span class="proj-card-thumb-num">02</span>
+      </div>
+      <div class="proj-card-body">
+        <span class="proj-num">2024 — Brand Identity</span>
+        <h3>EcoChain</h3>
+        <p class="proj-card-desc">Sustainable brand identity with interactive storytelling, motion guidelines, and a comprehensive design language system built for scale.</p>
+        <div class="proj-card-tech">
+          <span class="tech">Figma</span><span class="tech">After Effects</span><span class="tech">Illustrator</span>
+        </div>
+      </div>
       <div class="proj-card-footer">
-        <div class="tech-row" style="margin:0"><span class="tech">Figma</span><span class="tech">After Effects</span></div>
+        <div class="proj-card-links">
+          <a href="#" class="proj-card-link-btn primary">View →</a>
+          <a href="#" class="proj-card-link-btn">GitHub</a>
+        </div>
         <button class="proj-card-arrow">→</button>
       </div>
     </div>
+
+    <!-- Card 03 -->
     <div class="proj-card reveal">
-      <svg class="proj-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="4.5"/><circle cx="8" cy="15" r="4"/><circle cx="17.5" cy="16.5" r="3.5"/></svg>
-      <span class="proj-num">03 — UI Design</span>
-      <h3>Artflow</h3>
-      <p>Creative portfolio template with glassmorphism aesthetics, layered micro-interactions, and dark mode.</p>
+      <div class="proj-card-thumb">
+        <!-- Replace src with: src="projects/artflow.jpg" -->
+        <div class="proj-card-thumb-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="4.5"/><circle cx="8" cy="15" r="4"/><circle cx="17.5" cy="16.5" r="3.5"/></svg>
+        </div>
+        <span class="proj-card-thumb-tag">UI Design</span>
+        <span class="proj-card-thumb-num">03</span>
+      </div>
+      <div class="proj-card-body">
+        <span class="proj-num">2024 — UI / UX Design</span>
+        <h3>Artflow</h3>
+        <p class="proj-card-desc">Creative portfolio template with glassmorphism aesthetics, layered micro-interactions, dark mode, and smooth page transitions.</p>
+        <div class="proj-card-tech">
+          <span class="tech">HTML/CSS</span><span class="tech">JavaScript</span><span class="tech">GSAP</span>
+        </div>
+      </div>
       <div class="proj-card-footer">
-        <div class="tech-row" style="margin:0"><span class="tech">HTML/CSS</span><span class="tech">JS</span></div>
+        <div class="proj-card-links">
+          <a href="#" class="proj-card-link-btn primary">View →</a>
+          <a href="#" class="proj-card-link-btn">GitHub</a>
+        </div>
         <button class="proj-card-arrow">→</button>
       </div>
     </div>
+
+    <!-- Card 04 -->
     <div class="proj-card reveal">
-      <svg class="proj-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      <span class="proj-num">04 — Frontend</span>
-      <h3>Pulse Dashboard</h3>
-      <p>Analytics dashboard with real-time data visualisation, drag-and-drop layout, and full keyboard accessibility.</p>
+      <div class="proj-card-thumb">
+        <!-- Replace src with: src="projects/pulse-dashboard.jpg" -->
+        <div class="proj-card-thumb-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <span class="proj-card-thumb-tag">Frontend</span>
+        <span class="proj-card-thumb-num">04</span>
+      </div>
+      <div class="proj-card-body">
+        <span class="proj-num">2023 — Frontend Dev</span>
+        <h3>Pulse Dashboard</h3>
+        <p class="proj-card-desc">Analytics dashboard with real-time data visualisation, drag-and-drop layout, and full keyboard accessibility for power users.</p>
+        <div class="proj-card-tech">
+          <span class="tech">React</span><span class="tech">D3.js</span><span class="tech">TypeScript</span>
+        </div>
+      </div>
       <div class="proj-card-footer">
-        <div class="tech-row" style="margin:0"><span class="tech">React</span><span class="tech">D3.js</span></div>
+        <div class="proj-card-links">
+          <a href="#" class="proj-card-link-btn primary">View →</a>
+          <a href="#" class="proj-card-link-btn">GitHub</a>
+        </div>
         <button class="proj-card-arrow">→</button>
       </div>
     </div>
+
+    <!-- Card 05 -->
+    <div class="proj-card reveal">
+      <div class="proj-card-thumb">
+        <!-- Replace src with: src="projects/luxora.jpg" -->
+        <div class="proj-card-thumb-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <span class="proj-card-thumb-tag">UI/UX</span>
+        <span class="proj-card-thumb-num">05</span>
+      </div>
+      <div class="proj-card-body">
+        <span class="proj-num">2023 — UI / UX Design</span>
+        <h3>Luxora App</h3>
+        <p class="proj-card-desc">Luxury e-commerce mobile app UI with editorial layout, animated product reveals, and a refined checkout experience.</p>
+        <div class="proj-card-tech">
+          <span class="tech">Figma</span><span class="tech">Protopie</span><span class="tech">React Native</span>
+        </div>
+      </div>
+      <div class="proj-card-footer">
+        <div class="proj-card-links">
+          <a href="#" class="proj-card-link-btn primary">View →</a>
+          <a href="#" class="proj-card-link-btn">Figma</a>
+        </div>
+        <button class="proj-card-arrow">→</button>
+      </div>
+    </div>
+
+    <!-- Card 06 -->
+    <div class="proj-card reveal">
+      <div class="proj-card-thumb">
+        <!-- Replace src with: src="projects/synapse.jpg" -->
+        <div class="proj-card-thumb-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <span class="proj-card-thumb-tag">Motion</span>
+        <span class="proj-card-thumb-num">06</span>
+      </div>
+      <div class="proj-card-body">
+        <span class="proj-num">2023 — Motion Design</span>
+        <h3>Synapse — Motion Kit</h3>
+        <p class="proj-card-desc">A reusable motion design system with 40+ hand-crafted animation presets, After Effects templates, and Lottie exports.</p>
+        <div class="proj-card-tech">
+          <span class="tech">After Effects</span><span class="tech">Lottie</span><span class="tech">JS</span>
+        </div>
+      </div>
+      <div class="proj-card-footer">
+        <div class="proj-card-links">
+          <a href="#" class="proj-card-link-btn primary">View →</a>
+          <a href="#" class="proj-card-link-btn">Preview</a>
+        </div>
+        <button class="proj-card-arrow">→</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- View All CTA -->
+  <div class="proj-view-all reveal">
+    <a href="#contacts" class="proj-view-all-btn">Discuss a Project →</a>
   </div>
 </section>
 
